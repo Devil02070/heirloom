@@ -1,0 +1,20 @@
+{
+  "name": "deadswitch-backend",
+  "version": "1.0.0",
+  "description": "DeadSwitch - DeFi Inheritance & Emergency Protocol Agent",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^5.2.1",
+    "uuid": "^11.1.0"
+  }
+}

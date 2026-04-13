@@ -1,0 +1,13 @@
+{
+  "totalValueUSD": 12450,
+  "tokens": [
+    { "symbol": "ETH", "name": "Ethereum", "balance": "2.5", "valueUSD": "8750" },
+    { "symbol": "OKB", "name": "OKB Token", "balance": "150", "valueUSD": "2400" },
+    { "symbol": "USDC", "name": "USD Coin", "balance": "800", "valueUSD": "800" },
+    { "symbol": "WBTC", "name": "Wrapped Bitcoin", "balance": "0.005", "valueUSD": "500" }
+  ],
+  "defiPositions": [
+    { "protocol": "Uniswap V3", "type": "LP", "pair": "ETH/USDC", "valueUSD": 3200 },
+    { "protocol": "Aave", "type": "Lending", "asset": "USDC", "valueUSD": 1500 }
+  ]
+}
