@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useApi, apiPost } from '../hooks/useApi'
 import { useWallet } from '../context/WalletContext'
+import AgentCard from '../components/AgentCard'
 
 export default function Configure() {
   const { address } = useWallet()
@@ -88,6 +89,9 @@ export default function Configure() {
           {saved ? 'Saved!' : saving ? 'Saving...' : 'Save Configuration'}
         </motion.button>
       </div>
+
+      {/* Agentic Wallet — Dead Man's Switch identity */}
+      <AgentCard />
 
       {/* Inactivity Threshold */}
       <div className="p-6" style={{ border: '1px solid var(--border)', background: 'var(--card-bg)' }}>

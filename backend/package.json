@@ -1,7 +1,7 @@
 {
-  "name": "deadswitch-backend",
+  "name": "heirloom-backend",
   "version": "1.0.0",
-  "description": "DeadSwitch - DeFi Inheritance & Emergency Protocol Agent",
+  "description": "Heirloom - DeFi Inheritance & Emergency Protocol Agent",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",

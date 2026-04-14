@@ -31,7 +31,7 @@ export default function CTA({ onLaunchApp }) {
             <span style={{ color: '#FF2D20' }}>die with you</span>
           </h2>
           <p className="text-lg mb-10" style={{ color: 'var(--text-p)' }}>
-            Set up your DeadSwitch in minutes. Your beneficiaries will thank you.
+            Set up your Heirloom in minutes. Your beneficiaries will thank you.
           </p>
 
           <motion.button

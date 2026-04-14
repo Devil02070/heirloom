@@ -8,6 +8,7 @@ const portfolioRoutes = require('./routes/portfolio')
 const executeRoutes = require('./routes/execute')
 const historyRoutes = require('./routes/history')
 const walletRoutes = require('./routes/wallet')
+const agentRoutes = require('./routes/agent')
 
 const app = express()
 const PORT = process.env.PORT || 3001
@@ -26,10 +27,11 @@ app.use('/api', portfolioRoutes)
 app.use('/api', executeRoutes)
 app.use('/api', historyRoutes)
 app.use('/api', walletRoutes)
+app.use('/api', agentRoutes)
 
 // Health check
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', agent: 'DeadSwitch', version: '1.0.0' })
+  res.json({ status: 'ok', agent: 'Heirloom', version: '1.0.0' })
 })
 
 // Serve frontend build in production
@@ -47,5 +49,5 @@ if (fs.existsSync(frontendDist)) {
 }
 
 app.listen(PORT, () => {
-  console.log(`DeadSwitch running on port ${PORT}`)
+  console.log(`Heirloom running on port ${PORT}`)
 })

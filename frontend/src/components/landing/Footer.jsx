@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <Logo size={36} />
-            <span className="text-xs font-black uppercase tracking-wider" style={{ color: 'var(--text-h)' }}>DeadSwitch</span>
+            <span className="text-xs font-black uppercase tracking-wider" style={{ color: 'var(--text-h)' }}>Heirloom</span>
           </div>
 
           <div className="flex items-center gap-6">

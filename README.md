@@ -1,4 +1,4 @@
-# DeadSwitch
+# Heirloom
 
 **DeFi Inheritance & Emergency Protocol** — an AI agent that monitors wallet inactivity and, when triggered, liquidates all positions to stablecoins and distributes them to configured beneficiaries.
 
@@ -12,7 +12,7 @@ $140B+ in crypto is estimated permanently lost. If a wallet holder is incapacita
 
 ## The solution
 
-DeadSwitch lets a user configure an emergency plan once:
+Heirloom lets a user configure an emergency plan once:
 
 1. **Beneficiary list** — addresses + allocation percentages
 2. **Inactivity threshold** — e.g. 30 days without any wallet TX
@@ -108,7 +108,7 @@ The **Inactivity Monitor** tracks real wallet activity by comparing the on-chain
 ## Project structure
 
 ```
-DeadSwitch/
+Heirloom/
 ├── backend/
 │   ├── data/              # JSON persistence: config, status, portfolio, history
 │   └── src/

@@ -21,7 +21,7 @@ export const xLayerTestnet = defineChain({
 })
 
 const metadata = {
-  name: 'DeadSwitch',
+  name: 'Heirloom',
   description: 'DeFi Inheritance & Emergency Protocol',
   url: typeof window !== 'undefined' ? window.location.origin : 'http://localhost:5173',
   icons: ['https://avatars.githubusercontent.com/u/179229932'],

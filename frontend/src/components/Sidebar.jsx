@@ -29,7 +29,7 @@ export default function Sidebar({ activePage, onNavigate, onGoHome, onConnectWal
         >
           <Logo size={48} />
           <div className="text-left">
-            <h1 className="text-base font-black uppercase tracking-tight" style={{ color: 'var(--text-h)' }}>DeadSwitch</h1>
+            <h1 className="text-base font-black uppercase tracking-tight" style={{ color: 'var(--text-h)' }}>Heirloom</h1>
             <p className="text-[10px] font-mono uppercase tracking-[0.15em]" style={{ color: 'var(--text-m)' }}>Protocol v1.0</p>
           </div>
         </motion.button>

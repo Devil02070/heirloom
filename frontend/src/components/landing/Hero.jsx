@@ -98,7 +98,7 @@ export default function Hero({ onLaunchApp, onConnectWallet }) {
             </p>
             <p className="text-base leading-relaxed" style={{ color: 'var(--text-m)' }}>
               Your DeFi positions, LP tokens, and wallet assets — frozen forever when you can't access them.
-              DeadSwitch monitors your wallet and executes your emergency plan automatically.
+              Heirloom monitors your wallet and executes your emergency plan automatically.
             </p>
 
             {/* Stats row */}

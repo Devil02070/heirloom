@@ -82,10 +82,10 @@ export function WalletProvider({ children }) {
   // Track wallet activity via nonce changes in localStorage
   const trackActivity = useCallback((addr, nonce) => {
     if (!addr || nonce == null) return
-    const key = `deadswitch-activity-${addr.toLowerCase()}`
+    const key = `heirloom-activity-${addr.toLowerCase()}`
     const now = new Date().toISOString()
 
-    const demoOverride = localStorage.getItem('deadswitch-activity-demo')
+    const demoOverride = localStorage.getItem('heirloom-activity-demo')
     if (demoOverride) {
       setLastActivityAt(demoOverride)
       return
@@ -231,16 +231,16 @@ export function WalletProvider({ children }) {
 
   const setDemoInactivity = useCallback((days) => {
     if (days == null || days < 0) {
-      localStorage.removeItem('deadswitch-activity-demo')
+      localStorage.removeItem('heirloom-activity-demo')
       if (address) {
-        const key = `deadswitch-activity-${address.toLowerCase()}`
+        const key = `heirloom-activity-${address.toLowerCase()}`
         localStorage.removeItem(key)
         refreshBalances(address)
       }
       return
     }
     const at = new Date(Date.now() - days * 86400000).toISOString()
-    localStorage.setItem('deadswitch-activity-demo', at)
+    localStorage.setItem('heirloom-activity-demo', at)
     setLastActivityAt(at)
   }, [address, refreshBalances])
 

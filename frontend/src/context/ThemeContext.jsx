@@ -5,14 +5,14 @@ const ThemeContext = createContext()
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('deadswitch-theme') || 'dark'
+      return localStorage.getItem('heirloom-theme') || 'dark'
     }
     return 'dark'
   })
 
   useEffect(() => {
     document.body.className = `theme-${theme}`
-    localStorage.setItem('deadswitch-theme', theme)
+    localStorage.setItem('heirloom-theme', theme)
   }, [theme])
 
   const toggle = () => setTheme(t => (t === 'dark' ? 'light' : 'dark'))
