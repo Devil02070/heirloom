@@ -3,8 +3,8 @@
   "targetStablecoin": "USDC",
   "beneficiaries": [
     {
-      "name": "devil",
-      "address": "0x9d8ef16cc3787de213e68c7cc30406e515981f78",
+      "name": "dfs",
+      "address": "0x7a41524cfc4654f571b0d889bf528bb0432d1ca6",
       "allocationPercent": 100
     }
   ],

@@ -1,3 +1,574 @@
 {
-  "executions": []
+  "executions": [
+    {
+      "id": "1776149663272",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T06:54:23.273Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.199999 OKB to dfs",
+          "status": "failed",
+          "txHash": null,
+          "error": "Transaction failed"
+        }
+      ],
+      "summary": {
+        "totalUSD": 33.94378615278574,
+        "transfers": [
+          {
+            "beneficiary": "dfs",
+            "address": "0x7a41524cfc4654f571b0d889bf528bb0432d1ca6",
+            "token": "OKB",
+            "amount": "0.199999",
+            "status": "failed",
+            "error": "Transaction failed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776147270363",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T06:14:30.363Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.199999 OKB to dfs",
+          "status": "failed",
+          "txHash": null,
+          "error": "Transaction failed"
+        }
+      ],
+      "summary": {
+        "totalUSD": 33.87982212998933,
+        "transfers": [
+          {
+            "beneficiary": "dfs",
+            "address": "0x7a41524cfc4654f571b0d889bf528bb0432d1ca6",
+            "token": "OKB",
+            "amount": "0.199999",
+            "status": "failed",
+            "error": "Transaction failed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776146812155",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T06:06:52.155Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.199999 OKB to dfs",
+          "status": "failed",
+          "txHash": null,
+          "error": "Transaction failed"
+        }
+      ],
+      "summary": {
+        "totalUSD": 33.87582215098933,
+        "transfers": [
+          {
+            "beneficiary": "dfs",
+            "address": "0x7a41524cfc4654f571b0d889bf528bb0432d1ca6",
+            "token": "OKB",
+            "amount": "0.199999",
+            "status": "failed",
+            "error": "Transaction failed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776146417674",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T06:00:17.674Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.199999 OKB to dfs",
+          "status": "failed",
+          "txHash": null,
+          "error": "Request Signature: User denied request signature."
+        }
+      ],
+      "summary": {
+        "totalUSD": 33.85185782159289,
+        "transfers": [
+          {
+            "beneficiary": "dfs",
+            "address": "0x7a41524cfc4654f571b0d889bf528bb0432d1ca6",
+            "token": "OKB",
+            "amount": "0.199999",
+            "status": "failed",
+            "error": "Request Signature: User denied request signature."
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776145918414",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T05:51:58.414Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.359998 OKB to dfs",
+          "status": "failed",
+          "txHash": null,
+          "error": "ethers-user-denied: Request Signature: User denied request signature."
+        }
+      ],
+      "summary": {
+        "totalUSD": 33.87185773759289,
+        "transfers": [
+          {
+            "beneficiary": "dfs",
+            "address": "0x7a41524cfc4654f571b0d889bf528bb0432d1ca6",
+            "token": "OKB",
+            "amount": "0.359998",
+            "status": "failed",
+            "error": "ethers-user-denied: Request Signature: User denied request signature."
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776145012269",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T05:36:52.269Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.134998 OKB to Alice",
+          "status": "failed",
+          "txHash": null,
+          "error": "Transaction failed"
+        }
+      ],
+      "summary": {
+        "totalUSD": 16.935857737592887,
+        "transfers": [
+          {
+            "beneficiary": "Alice",
+            "address": "0xfdEe6e34cAA5cCD6f7831a944F8f8cd0E520cb45",
+            "token": "OKB",
+            "amount": "0.134998",
+            "status": "failed",
+            "error": "Transaction failed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776144607885",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T05:30:07.885Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.149998 OKB to Alice",
+          "status": "failed",
+          "txHash": null,
+          "error": "Transaction failed"
+        }
+      ],
+      "summary": {
+        "totalUSD": 16.92985778799289,
+        "transfers": [
+          {
+            "beneficiary": "Alice",
+            "address": "0xfdEe6e34cAA5cCD6f7831a944F8f8cd0E520cb45",
+            "token": "OKB",
+            "amount": "0.149998",
+            "status": "failed",
+            "error": "Transaction failed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776144275230",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T05:24:35.231Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.149998 OKB to Alice",
+          "status": "failed",
+          "txHash": null,
+          "error": "Transaction failed"
+        }
+      ],
+      "summary": {
+        "totalUSD": 16.92985778799289,
+        "transfers": [
+          {
+            "beneficiary": "Alice",
+            "address": "0xfdEe6e34cAA5cCD6f7831a944F8f8cd0E520cb45",
+            "token": "OKB",
+            "amount": "0.149998",
+            "status": "failed",
+            "error": "Transaction failed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776142905229",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T05:01:45.230Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.149998 OKB to Alice",
+          "status": "failed",
+          "txHash": null,
+          "error": "Transaction failed"
+        }
+      ],
+      "summary": {
+        "totalUSD": 16.943857670392884,
+        "transfers": [
+          {
+            "beneficiary": "Alice",
+            "address": "0xfdEe6e34cAA5cCD6f7831a944F8f8cd0E520cb45",
+            "token": "OKB",
+            "amount": "0.149998",
+            "status": "failed",
+            "error": "Transaction failed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776142279824",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T04:51:19.824Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.149998 OKB to Alice",
+          "status": "failed",
+          "txHash": null,
+          "error": "Transaction failed"
+        }
+      ],
+      "summary": {
+        "totalUSD": 16.963857502392873,
+        "transfers": [
+          {
+            "beneficiary": "Alice",
+            "address": "0xfdEe6e34cAA5cCD6f7831a944F8f8cd0E520cb45",
+            "token": "OKB",
+            "amount": "0.149998",
+            "status": "failed",
+            "error": "Transaction failed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776142216879",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T04:50:16.879Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.149998 OKB to Alice",
+          "status": "failed",
+          "txHash": null,
+          "error": "Transaction failed"
+        }
+      ],
+      "summary": {
+        "totalUSD": 16.963857502392873,
+        "transfers": [
+          {
+            "beneficiary": "Alice",
+            "address": "0xfdEe6e34cAA5cCD6f7831a944F8f8cd0E520cb45",
+            "token": "OKB",
+            "amount": "0.149998",
+            "status": "failed",
+            "error": "Transaction failed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776141859912",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T04:44:19.912Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.198997 OKB to Alice",
+          "status": "failed",
+          "txHash": null,
+          "error": "Transaction failed"
+        }
+      ],
+      "summary": {
+        "totalUSD": 16.97785738479287,
+        "transfers": [
+          {
+            "beneficiary": "Alice",
+            "address": "0xfdEe6e34cAA5cCD6f7831a944F8f8cd0E520cb45",
+            "token": "OKB",
+            "amount": "0.198997",
+            "status": "failed",
+            "error": "Transaction failed"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776141679210",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T04:41:19.210Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.199497 OKB to Alice",
+          "status": "failed",
+          "txHash": null,
+          "error": "could not coalesce error"
+        }
+      ],
+      "summary": {
+        "totalUSD": 16.985857317592867,
+        "transfers": [
+          {
+            "beneficiary": "Alice",
+            "address": "0xfdEe6e34cAA5cCD6f7831a944F8f8cd0E520cb45",
+            "token": "OKB",
+            "amount": "0.199497",
+            "status": "failed",
+            "error": "could not coalesce error"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776141661622",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T04:41:01.622Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.199497 OKB to Alice",
+          "status": "failed",
+          "txHash": null,
+          "error": "could not coalesce error"
+        }
+      ],
+      "summary": {
+        "totalUSD": 16.985857317592867,
+        "transfers": [
+          {
+            "beneficiary": "Alice",
+            "address": "0xfdEe6e34cAA5cCD6f7831a944F8f8cd0E520cb45",
+            "token": "OKB",
+            "amount": "0.199497",
+            "status": "failed",
+            "error": "could not coalesce error"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1776141633222",
+      "trigger": "Panic Button",
+      "timestamp": "2026-04-14T04:40:33.222Z",
+      "status": "failed",
+      "chain": "X Layer Testnet",
+      "steps": [
+        {
+          "action": "Scan Wallet",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Compute Transfer Amounts",
+          "status": "completed",
+          "txHash": null
+        },
+        {
+          "action": "Transfer 0.199497 OKB to Alice",
+          "status": "failed",
+          "txHash": null,
+          "error": "could not coalesce error"
+        }
+      ],
+      "summary": {
+        "totalUSD": 16.97785738479287,
+        "transfers": [
+          {
+            "beneficiary": "Alice",
+            "address": "0xfdEe6e34cAA5cCD6f7831a944F8f8cd0E520cb45",
+            "token": "OKB",
+            "amount": "0.199497",
+            "status": "failed",
+            "error": "could not coalesce error"
+          }
+        ]
+      }
+    }
+  ]
 }

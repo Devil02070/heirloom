@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useWallet } from '../context/WalletContext'
 
 export default function WalletButton({ onConnectClick }) {
-  const { isConnected, shortAddress, balance, chainInfo, providerName, disconnect } = useWallet()
+  const { isConnected, shortAddress, balance, chainInfo, providerName, walletInfo, disconnect } = useWallet()
   const [dropdownOpen, setDropdownOpen] = useState(false)
 
   if (!isConnected) {
@@ -60,11 +60,16 @@ export default function WalletButton({ onConnectClick }) {
               className="absolute right-0 top-full mt-2 w-56 rounded-xl p-2 z-50"
               style={{ background: 'var(--surface)', border: '1px solid var(--border)', boxShadow: '0 12px 40px rgba(0,0,0,0.2)' }}
             >
-              <div className="px-3 py-2 mb-1">
-                <p className="text-xs font-medium" style={{ color: 'var(--text-m)' }}>Connected with</p>
-                <p className="text-sm font-semibold capitalize" style={{ color: 'var(--text-h)' }}>
-                  {providerName === 'okx' ? 'OKX Wallet' : 'MetaMask'}
-                </p>
+              <div className="px-3 py-2 mb-1 flex items-center gap-2">
+                {walletInfo?.icon && (
+                  <img src={walletInfo.icon} alt="" className="w-6 h-6 rounded" />
+                )}
+                <div>
+                  <p className="text-xs font-medium" style={{ color: 'var(--text-m)' }}>Connected with</p>
+                  <p className="text-sm font-semibold" style={{ color: 'var(--text-h)' }}>
+                    {providerName}
+                  </p>
+                </div>
               </div>
               <div style={{ borderTop: '1px solid var(--border)' }} className="pt-1">
                 <motion.button

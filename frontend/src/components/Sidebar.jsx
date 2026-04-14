@@ -12,7 +12,7 @@ const nav = [
 ]
 
 export default function Sidebar({ activePage, onNavigate, onGoHome, onConnectWallet, onDisconnect }) {
-  const { isConnected, address, shortAddress, balance, nativeBalanceUSD, chainInfo, providerName, totalValueUSD } = useWallet()
+  const { isConnected, address, shortAddress, balance, nativeBalanceUSD, chainInfo, providerName, walletInfo, totalValueUSD } = useWallet()
 
   return (
     <aside
@@ -57,8 +57,9 @@ export default function Sidebar({ activePage, onNavigate, onGoHome, onConnectWal
             <div className="relative z-10">
             <div className="flex items-center gap-2 mb-2">
               <span className="w-2 h-2 bg-success" />
+              {walletInfo?.icon && <img src={walletInfo.icon} alt="" className="w-3.5 h-3.5" />}
               <span className="text-[10px] font-mono uppercase tracking-[0.1em]" style={{ color: 'var(--text-m)' }}>
-                {providerName === 'okx' ? 'OKX Wallet' : 'MetaMask'}
+                {providerName}
               </span>
             </div>
             <div className="flex items-center gap-2">

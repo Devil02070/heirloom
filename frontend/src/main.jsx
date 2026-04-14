@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import './lib/appkit' // initializes Reown AppKit
 import App from './App.jsx'
 
 // Set initial theme before render to avoid flash

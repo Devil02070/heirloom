@@ -13,13 +13,19 @@ export default function Dashboard() {
     balance, nativePrice, nativeBalanceUSD,
     tokens, totalValueUSD,
     loading: walletLoading, txCount,
-    switchToXLayerTestnet,
+    lastActivityAt, daysSinceActivity,
+    switchToXLayerTestnet, refreshBalances, setDemoInactivity,
   } = useWallet()
+
+  const isTestnet = chainId === 195
 
   const { data: config, loading: configLoading } = useApi('/config')
   const { data: status, loading: statusLoading, refetch: refetchStatus } = useApi('/status')
 
-  if (configLoading || statusLoading || walletLoading) {
+  // Only block with full-screen loader on initial load (no data yet) —
+  // refresh clicks should keep the dashboard visible.
+  const initialLoading = (configLoading && !config) || (statusLoading && !status) || (walletLoading && balance === null)
+  if (initialLoading) {
     return (
       <div className="flex items-center justify-center h-96">
         <div className="flex flex-col items-center gap-3">
@@ -40,12 +46,13 @@ export default function Dashboard() {
   // Build token list: native + ERC20s from real wallet
   const allTokens = []
 
-  // Native currency
-  if (parseFloat(balance || 0) > 0) {
+  // Native currency — always show on testnet (even 0 balance) so user sees OKB is tracked
+  const nativeBalanceNum = parseFloat(balance || 0)
+  if (nativeBalanceNum > 0 || isTestnet) {
     allTokens.push({
       symbol: chainInfo.nativeSymbol,
       name: chainInfo.nativeName,
-      balance: parseFloat(balance).toFixed(6),
+      balance: nativeBalanceNum.toFixed(6),
       priceUSD: nativePrice,
       valueUSD: nativeBalanceUSD,
       isNative: true,
@@ -78,12 +85,32 @@ export default function Dashboard() {
           <p className="text-[10px] font-mono uppercase tracking-[0.15em] mt-1" style={{ color: 'var(--text-m)' }}>Real-time data from your connected wallet</p>
         </div>
         {address && (
-          <div className="flex items-center gap-2 px-4 py-2" style={{ border: '1px solid var(--border)' }}>
-            <span className="w-2 h-2 bg-success" />
-            <span className="text-[10px] font-mono font-bold" style={{ color: 'var(--text-p)' }}>{shortAddress}</span>
-            <span className="text-[10px] font-mono font-bold px-2 py-0.5" style={{ border: '1px solid var(--border)', color: 'var(--text-m)' }}>
-              {chainInfo.name}
-            </span>
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 px-4 py-2" style={{ border: '1px solid var(--border)' }}>
+              <span className="w-2 h-2 bg-success" />
+              <span className="text-[10px] font-mono font-bold" style={{ color: 'var(--text-p)' }}>{shortAddress}</span>
+              <span
+                className="text-[10px] font-mono font-bold px-2 py-0.5"
+                style={{
+                  border: isTestnet ? '1px solid #eab308' : '1px solid var(--border)',
+                  color: isTestnet ? '#eab308' : 'var(--text-m)',
+                  background: isTestnet ? 'rgba(234,179,8,0.1)' : 'transparent',
+                }}
+              >
+                {isTestnet ? 'X LAYER TESTNET' : chainInfo.name}
+              </span>
+            </div>
+            <motion.button
+              onClick={() => refreshBalances()}
+              className="px-3 py-2 text-[10px] font-mono font-bold uppercase cursor-pointer border-none"
+              style={{ background: 'var(--surface-2)', border: '1px solid var(--border)', color: 'var(--text-p)' }}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              disabled={walletLoading}
+              title="Refresh wallet balances"
+            >
+              {walletLoading ? '...' : '↻ Refresh'}
+            </motion.button>
           </div>
         )}
       </div>
@@ -140,12 +167,27 @@ export default function Dashboard() {
         />
       </div>
 
-      {/* Inactivity Timer */}
-      <InactivityTimer
-        daysSince={statusData.daysSinceActivity}
-        threshold={configData.inactivityThresholdDays}
-        status={statusData.state}
-      />
+      {/* Inactivity Timer — driven by connected wallet activity (nonce changes) */}
+      {(() => {
+        const threshold = configData.inactivityThresholdDays || 30
+        // Prefer live wallet data when connected; fall back to backend status
+        const days = address && daysSinceActivity != null
+          ? daysSinceActivity
+          : (statusData.daysSinceActivity || 0)
+        let state = 'ACTIVE'
+        if (days >= threshold) state = 'TRIGGERED'
+        else if (days >= threshold * 0.7) state = 'WARNING'
+        return (
+          <InactivityTimer
+            daysSince={days}
+            threshold={threshold}
+            status={state}
+            lastActivityAt={address ? lastActivityAt : null}
+            isLive={!!address}
+            onSimulate={address ? setDemoInactivity : null}
+          />
+        )
+      })()}
 
       {/* Panic + Beneficiaries */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

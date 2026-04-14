@@ -164,4 +164,39 @@ router.post('/execute/transfer', (req, res) => {
   })
 })
 
+// Record a frontend-executed panic (signed by connected browser wallet)
+router.post('/execute/record', (req, res) => {
+  const { trigger = 'Panic Button', totalUSD = 0, results = [], chain = 'X Layer Testnet' } = req.body || {}
+  const txHashes = results.filter(r => r.txHash).map(r => r.txHash)
+  const status = txHashes.length > 0
+    ? (results.every(r => r.status === 'completed') ? 'completed' : 'partial')
+    : 'failed'
+
+  const execution = {
+    id: Date.now().toString(),
+    trigger,
+    timestamp: new Date().toISOString(),
+    status,
+    chain,
+    steps: [
+      { action: 'Scan Wallet', status: 'completed', txHash: null },
+      { action: 'Compute Transfer Amounts', status: 'completed', txHash: null },
+      ...results.map(r => ({
+        action: `Transfer ${r.amount || ''} ${r.token || ''} to ${r.beneficiary}`.trim(),
+        status: r.status,
+        txHash: r.txHash || null,
+        error: r.error || null,
+      })),
+    ],
+    summary: { totalUSD, transfers: results },
+  }
+
+  store.addExecution(execution)
+
+  // Also update activity timestamp since user just transacted
+  store.saveStatus({ lastActivityTimestamp: new Date().toISOString() })
+
+  res.json({ success: true, execution })
+})
+
 module.exports = router
